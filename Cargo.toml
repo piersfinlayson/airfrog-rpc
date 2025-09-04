@@ -1,0 +1,28 @@
+[package]
+name    = "airfrog-rpc"
+version = "0.1.0"
+edition = "2024"
+authors = ["Piers Finlayson <piers@piers.rocks>"]
+description = "RPC support for co-processing using debug protocols"
+repository = "https://github.com/piersfinlayson/airfrog-rpc"
+readme = "README.md"
+license = "MIT"
+keywords = ["embedded", "airfrog", "swd", "arm", "stm32"]
+categories = [
+    "embedded",
+    "hardware-support", 
+    "network-programming",
+    "development-tools",
+]
+
+[lib]
+name = "airfrog_rpc"
+path = "src/lib.rs"
+
+[features]
+default = [ "async" ]
+async = [ "dep:async-trait" ]
+
+[dependencies]
+async-trait = { version = "0.1", optional = true }
+log = "0.4"
