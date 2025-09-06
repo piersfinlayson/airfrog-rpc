@@ -12,7 +12,6 @@ use log::{debug, error, info, trace, warn};
 use crate::channel::{ChannelActor, ReaderWriterChannel, ReaderWriterChannelIo};
 use crate::client::{ChannelConfig, RpcClientConfig};
 use crate::io::{Reader, Writer};
-
 /// Yield delay for async polling loops.
 ///
 /// Application must provide an implementation of this trait in order for the

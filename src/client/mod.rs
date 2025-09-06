@@ -38,6 +38,7 @@ pub enum RpcClientConfig {
     },
 }
 
+#[cfg(feature = "async")]
 /// Configuration for how to create a channel
 #[derive(Debug, Clone)]
 enum ChannelConfig {
