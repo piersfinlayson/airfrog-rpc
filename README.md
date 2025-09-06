@@ -1,10 +1,10 @@
 # airfrog-rpc
 
-Used to perform remote procedure calls and reading/writing over SWD and other debug protocols.
+A crate to perform remote procedure calls and reading/writing between controllers and targets over SWD and other debug protocols.
 
 ## Overview
 
-Airfrog-rpc provides a robust, bidirectional communication protocol between an SWD controller and target microcontroller. Unlike debugging tools, this enables the target to function as a co-processor, handling commands and returning results reliably.
+Airfrog-rpc provides a robust, bidirectional communication protocol between an SWD controller and target microcontroller. Unlike debugging tools, this enables the controller and target to function as a co-processing pair of MCUs, each handling commands and returning results reliably over a channel usually used for debug purposes.
 
 ## Features
 
