@@ -1,6 +1,6 @@
 # airfrog-rpc
 
-Used to perform remote procedure calls and reading/writing over SWD and other debug processing.
+Used to perform remote procedure calls and reading/writing over SWD and other debug protocols.
 
 ## Overview
 
