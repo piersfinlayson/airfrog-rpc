@@ -8,39 +8,14 @@ Airfrog-rpc provides a robust, bidirectional communication protocol between an S
 
 ## Features
 
+- Host and Target implementations
+- Asynchronous and synchronous APIs
 - Command/response semantics with sequence numbers
 - Variable-length payloads
 - Atomic operations using aligned word writes
 - `no-std` target implementation
 - Error handling and timeout support
 
-## Supported Targets
+## Getting Started
 
-Includes:
-
-- ARM Cortex-M4 (STM32F4 series)
-- ARM Cortex-M33 (RP2350)
-
-## Usage
-
-**Target side:**
-
-```rust
-use airfrog_rpc::Target;
-
-let mut rpc = Target::new(sram_region);
-rpc.register_handler(0x01, my_command_handler);
-rpc.poll(); // Call from main loop or separate Task
-```
-
-**Controller side:**
-
-```rust
-use airfrog_rpc::Controller;
-
-let response = controller.call(0x01, &command_data).await?;
-```
-
-## Protocol
-
-Uses separate memory-mapped channels for commands and responses, leveraging Cortex-M strong memory ordering and SWD atomic visibility.
+See the [crate documentation](https://docs.rs/airfrog-rpc).
